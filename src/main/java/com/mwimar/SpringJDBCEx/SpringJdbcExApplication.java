@@ -1,6 +1,7 @@
 package com.mwimar.SpringJDBCEx;
 
 import com.mwimar.SpringJDBCEx.model.Student;
+import com.mwimar.SpringJDBCEx.service.StudentService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +18,8 @@ public class SpringJdbcExApplication {
 		s.setName("Susan");
 		s.setMarks(90);
 
-		addStudent(s);
+		StudentService service = context.getBean(StudentService.class);
+		service.addStudent(s);
 	}
 
 }
