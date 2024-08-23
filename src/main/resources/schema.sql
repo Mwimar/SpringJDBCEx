@@ -1,5 +1,5 @@
 create table student(
-int rollno primary key,
-varchar(50) name,
-int marks
+rollno int primary key,
+name varchar(50),
+marks int
 );
