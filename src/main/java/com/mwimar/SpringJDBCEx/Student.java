@@ -1,5 +1,8 @@
 package com.mwimar.SpringJDBCEx;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Student {
     private int rollNo;
     private String name;
