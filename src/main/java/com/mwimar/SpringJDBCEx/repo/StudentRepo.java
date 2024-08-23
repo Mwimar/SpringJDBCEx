@@ -32,17 +32,16 @@ public class StudentRepo {
 
     public List<Student> findAll() {
         String sql = "select * from student";
-        RowMapper<Student> mapper = new RowMapper<Student>() {
-            @Override
-            public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
+//        RowMapper<Student> mapper = ( rs, rowNum) -> {
 
-                Student s = new Student;
-                s.setRollNo(rs.getInt("rollno"));
-                s.setName(rs.getString("name"));
-                s.setMarks(rs.getInt("marks"));
-                return s;
-            }
-        };
-        jdbc.query(sql, );
+
+        return jdbc.query(sql, ( rs, rowNum) -> {
+
+            Student s = new Student();
+        s.setRollNo(rs.getInt("rollno"));
+        s.setName(rs.getString("name"));
+        s.setMarks(rs.getInt("marks"));
+        return s;
+        });
     }
 }
