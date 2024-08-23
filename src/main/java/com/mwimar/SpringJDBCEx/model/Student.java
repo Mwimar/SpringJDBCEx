@@ -1,4 +1,4 @@
-package com.mwimar.SpringJDBCEx;
+package com.mwimar.SpringJDBCEx.model;
 
 import org.springframework.stereotype.Component;
 
