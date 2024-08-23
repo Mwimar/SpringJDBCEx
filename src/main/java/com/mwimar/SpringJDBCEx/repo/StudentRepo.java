@@ -23,7 +23,8 @@ public class StudentRepo {
 
     public void save(Student s) {
         String sql = "insert into student (rollno, name, marks) values = ?,?,?";
-        jdbc.update(sql);
+       int rows = jdbc.update(sql, s.getRollNo(), s.getName(), s.getMarks());
+        System.out.println(rows+ " Effected");
     }
 
     public List<Student> findAll() {
