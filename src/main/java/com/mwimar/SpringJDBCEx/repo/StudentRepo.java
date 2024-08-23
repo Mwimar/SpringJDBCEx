@@ -22,7 +22,8 @@ public class StudentRepo {
     }
 
     public void save(Student s) {
-        System.out.println("Student saved");
+        String sql = "insert into student (rollno, name, marks) values = ?,?,?";
+        jdbc.update(sql);
     }
 
     public List<Student> findAll() {
